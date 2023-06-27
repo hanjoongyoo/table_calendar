@@ -71,7 +71,10 @@ class CalendarStyle {
   /// Determines if a day cell that matches the current day should be highlighted.
   final bool isTodayHighlighted;
 
-  /// TextStyle for a day cell that matches the current day.
+  /// TextStyle for a day cell that matches the current day and selected.
+  final TextStyle todaySelectedTextStyle;
+
+  /// TextStyle for a day cell that matches the current day and isTodayHighlighted is false.
   final TextStyle todayTextStyle;
 
   /// Alternative text to express today instead of numbers
@@ -176,15 +179,16 @@ class CalendarStyle {
       color: const Color(0xFF263238),
       shape: BoxShape.circle,
     ),
-    this.todayTextStyle = const TextStyle(
-      color: const Color(0xFFFAFAFA),
-      fontSize: 16.0,
-    ), //
     this.todayText,
     this.todayDecoration = const BoxDecoration(
       color: const Color(0xFF9FA8DA),
       shape: BoxShape.circle,
     ),
+    this.todaySelectedTextStyle = const TextStyle(
+      color: const Color(0xFFFAFAFA),
+      fontSize: 16.0,
+    ),
+    this.todayTextStyle = const TextStyle(),
     this.selectedTextStyle = const TextStyle(
       color: const Color(0xFFFAFAFA),
       fontSize: 16.0,
