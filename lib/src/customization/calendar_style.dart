@@ -83,6 +83,9 @@ class CalendarStyle {
   /// Decoration for a day cell that matches the current day.
   final Decoration todayDecoration;
 
+  /// Decoration for a day cell that focused.
+  final Decoration focusedDecoration;
+
   /// TextStyle for day cells that are currently marked as selected by `selectedDayPredicate`.
   final TextStyle selectedTextStyle;
 
@@ -189,6 +192,10 @@ class CalendarStyle {
       fontSize: 16.0,
     ),
     this.todayTextStyle = const TextStyle(),
+    this.focusedDecoration = const BoxDecoration(
+      color: const Color(0xFF5C6BC0),
+      shape: BoxShape.circle,
+    ),
     this.selectedTextStyle = const TextStyle(
       color: const Color(0xFFFAFAFA),
       fontSize: 16.0,
